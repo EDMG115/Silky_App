@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Puntuación · Silky</title>
+  <meta name="claude:viewport-fit-sides" content="cover">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600&family=Silkscreen&family=VT323&display=swap">
+  <link rel="stylesheet" href="css/pixel.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar__logo">
+        <img src="assets/silky-logo.png" alt="Silky" width="906" height="425">
+        <p class="sidebar__tag">programa · mira · aprende</p>
+      </div>
+      <nav class="nav" aria-label="Módulos">
+        <a href="index.html"><i class="pi" data-icon="code"></i><span>Editor de bloques</span></a>
+        <a href="retos.html"><i class="pi" data-icon="flag"></i><span>Retos</span></a>
+        <a href="imagenes.html"><i class="pi" data-icon="image"></i><span>Imágenes cara</span></a>
+        <a href="dashboard.html" aria-current="page"><i class="pi" data-icon="trophy"></i><span>Puntuación</span></a>
+        <a href="conexion.html"><i class="pi" data-icon="radio-signal"></i><span>Conexión</span></a>
+      </nav>
+      <div class="px-box player">
+        <div class="player__row">
+          <div class="player__avatar"><i class="pi" data-icon="user"></i></div>
+          <div>
+            <div class="player__name">Estudiante</div>
+            <div class="player__lvl">Nivel 2 · Aprendiz</div>
+          </div>
+        </div>
+        <div class="px-progress is-thin" style="--val:70" title="175 de 250 pts para nivel 3"></div>
+        <div class="player__lvl">175 / 250 pts → nivel 3</div>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="topbar__title">
+          <span class="eyebrow">Módulo · Dashboard</span>
+          <h1>Tu puntuación</h1>
+        </div>
+        <div class="topbar__status">
+          <span class="px-chip is-ok"><span class="led is-ok is-blink"></span>WiFi · 42 ms</span>
+          <span class="px-chip"><i class="pi" data-icon="battery-2"></i>78%</span>
+          <span class="px-chip is-silk"><i class="pi" data-icon="coin"></i>175 pts</span>
+        </div>
+      </header>
+
+      <main class="content">
+
+        <div class="kpis">
+          <section class="px-box kpi is-hero">
+            <div class="kpi__top"><span class="eyebrow">Puntos</span><i class="pi" data-icon="coin"></i></div>
+            <div class="kpi__value">175 <small>/ 1000</small></div>
+          </section>
+          <section class="px-box kpi">
+            <div class="kpi__top"><span class="eyebrow">Retos completados</span><i class="pi" data-icon="flag"></i></div>
+            <div class="kpi__value">3 <small>/ 9</small></div>
+          </section>
+          <section class="px-box kpi">
+            <div class="kpi__top"><span class="eyebrow">Racha</span><i class="pi" data-icon="speed-fast"></i></div>
+            <div class="kpi__value">4 <small>días</small></div>
+          </section>
+          <section class="px-box kpi">
+            <div class="kpi__top"><span class="eyebrow">Nivel</span><i class="pi" data-icon="trophy"></i></div>
+            <div class="kpi__value">2 <small>Aprendiz</small></div>
+          </section>
+        </div>
+
+        <div class="dash-grid">
+          <div class="side">
+            <section class="px-box px-card" aria-label="Avance">
+              <div class="px-card__head"><h2>Avance del curso</h2><span class="data">33 %</span></div>
+              <div class="px-progress" style="--val:33"></div>
+              <p class="muted">Siguiente reto: <b>#04 La patrulla cuadrada</b> · faltan 75 pts para el nivel 3.</p>
+            </section>
+
+            <section class="px-box px-card" aria-label="Avance por concepto">
+              <h2>Avance por concepto</h2>
+              <div class="concepts">
+              <div class="concept"><span class="concept__name">Movimiento</span><div class="px-progress is-thin is-ok" style="--val:100"></div><span class="concept__pct">100%</span></div>
+              <div class="concept"><span class="concept__name">Expresiones</span><div class="px-progress is-thin" style="--val:50"></div><span class="concept__pct">50%</span></div>
+              <div class="concept"><span class="concept__name">Ciclos</span><div class="px-progress is-thin" style="--val:40"></div><span class="concept__pct">40%</span></div>
+              <div class="concept"><span class="concept__name">Variables</span><div class="px-progress is-thin" style="--val:20"></div><span class="concept__pct">20%</span></div>
+              <div class="concept"><span class="concept__name">Condiciones</span><div class="px-progress is-thin" style="--val:0"></div><span class="concept__pct">0%</span></div>
+              <div class="concept"><span class="concept__name">Funciones</span><div class="px-progress is-thin" style="--val:0"></div><span class="concept__pct">0%</span></div>
+              </div>
+            </section>
+
+            <section class="px-box px-card" aria-label="Bloques por sesión">
+              <div class="px-card__head"><h2>Bloques usados por sesión</h2><span class="muted">últimas 8</span></div>
+              <div class="bars">
+                <div class="bars__axis"><span>30</span><span>20</span><span>10</span><span>0</span></div>
+                <div class="bars__plot">
+                <div class="bars__bar" style="--v:6"><span>6</span></div>
+                <div class="bars__bar" style="--v:9"><span>9</span></div>
+                <div class="bars__bar" style="--v:12"><span>12</span></div>
+                <div class="bars__bar" style="--v:11"><span>11</span></div>
+                <div class="bars__bar" style="--v:18"><span>18</span></div>
+                <div class="bars__bar" style="--v:14"><span>14</span></div>
+                <div class="bars__bar" style="--v:22"><span>22</span></div>
+                <div class="bars__bar is-last" style="--v:26"><span>26</span></div>
+                </div>
+                <div class="bars__labels"><span>S1</span><span>S2</span><span>S3</span><span>S4</span><span>S5</span><span>S6</span><span>S7</span><span>S8</span></div>
+              </div>
+            </section>
+          </div>
+
+          <div class="side">
+            <section class="px-box px-card" aria-label="Actividad reciente">
+              <h2>Actividad reciente</h2>
+              <ul class="plain activity">
+              <li><i class="pi" data-icon="check"></i><span>Completaste <b>#03 Ida y vuelta</b><br><time>hoy 18:42</time></span><span class="pts">+75</span></li>
+              <li><i class="pi" data-icon="play"></i><span>Ejecutaste <b>patrulla_cuadrada</b> (15 bloques)<br><time>hoy 18:10</time></span><span class="pts"></span></li>
+              <li><i class="pi" data-icon="image"></i><span>Guardaste la cara <b>logo_silky</b><br><time>ayer 17:31</time></span><span class="pts"></span></li>
+              <li><i class="pi" data-icon="check"></i><span>Completaste <b>#02 Hola, mundo</b><br><time>ayer 17:05</time></span><span class="pts">+50</span></li>
+              <li><i class="pi" data-icon="check"></i><span>Completaste <b>#01 Primeros pasos</b><br><time>22 oct</time></span><span class="pts">+50</span></li>
+              </ul>
+            </section>
+
+            <section class="px-box px-card" aria-label="Insignias">
+              <div class="px-card__head"><h2>Insignias</h2><span class="data">4 / 8</span></div>
+              <div class="badges">
+              <div class="badge"><div class="badge__icon"><i class="pi" data-icon="human-run"></i></div><span>Primer paso</span></div>
+              <div class="badge"><div class="badge__icon"><i class="pi" data-icon="mood-happy"></i></div><span>Saludador</span></div>
+              <div class="badge"><div class="badge__icon"><i class="pi" data-icon="speed-fast"></i></div><span>Racha de 3</span></div>
+              <div class="badge"><div class="badge__icon"><i class="pi" data-icon="image"></i></div><span>Artista OLED</span></div>
+              <div class="badge is-locked"><div class="badge__icon"><i class="pi" data-icon="lock"></i></div><span>Maestro de ciclos</span></div>
+              <div class="badge is-locked"><div class="badge__icon"><i class="pi" data-icon="lock"></i></div><span>Lógico</span></div>
+              <div class="badge is-locked"><div class="badge__icon"><i class="pi" data-icon="lock"></i></div><span>Coreógrafo</span></div>
+              <div class="badge is-locked"><div class="badge__icon"><i class="pi" data-icon="lock"></i></div><span>Silky total</span></div>
+              </div>
+            </section>
+
+            <section class="px-box px-card" aria-label="Datos guardados">
+              <div class="px-card__head"><h2><i class="pi" data-icon="server"></i>Datos guardados</h2><span class="px-chip">1.3 KB</span></div>
+<pre class="px-console"><span class="c">localStorage["silky.progreso.v1"]</span>
+{
+  <span class="k">"puntos"</span>: <span class="n">175</span>,
+  <span class="k">"nivel"</span>: <span class="n">2</span>,
+  <span class="k">"racha"</span>: <span class="n">4</span>,
+  <span class="k">"retos"</span>: { <span class="k">"01"</span>:<span class="s">"ok"</span>, <span class="k">"02"</span>:<span class="s">"ok"</span>,
+             <span class="k">"03"</span>:<span class="s">"ok"</span>, <span class="k">"04"</span>:<span class="s">"en_curso"</span> },
+  <span class="k">"actualizado"</span>: <span class="s">"2026-10-24T18:42"</span>
+}</pre>
+              <div class="px-btn-row">
+                <button class="px-btn is-sm" type="button"><i class="pi" data-icon="download"></i>Exportar JSON</button>
+                <button class="px-btn is-sm is-ghost" type="button"><i class="pi" data-icon="trash"></i>Reiniciar progreso</button>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/icons-data.js"></script>
+  <script src="js/pixel-art.js"></script>
+</body>
+</html>

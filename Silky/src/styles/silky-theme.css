@@ -1,0 +1,143 @@
+/* =====================================================================
+   .silky-theme — tokens de diseño
+   Fuente, interlineado, tamaños, colores y ritmo. El resto de clases
+   (componentes y layout) solo leen estas variables.
+   ===================================================================== */
+
+.silky-theme {
+  --ink: #0d0e1b;
+  --ink-2: #15172a;
+  --ink-3: #20233b;
+  --edge: #34385a;
+  --paper: #efece6;
+  --mute: #8d90a8;
+  --silk: #ad3043;
+  --silk-hi: #d4566a;
+  --silk-lo: #6b1a28;
+  --ok: #6fd08c;
+  --warn: #f2c14e;
+
+  --f-display: "Silkscreen", "Courier New", monospace;
+  --f-body: "Pixelify Sans", "Trebuchet MS", system-ui, sans-serif;
+  --f-data: "VT323", "Courier New", monospace;
+
+  --fs-xs: 0.62rem;
+  --fs-label: 0.66rem;
+  --fs-sm: 0.68rem;
+  --fs-nav: 0.74rem;
+  --fs-btn: 0.78rem;
+  --fs-h3: 0.9rem;
+  --fs-h2: 1.05rem;
+  --fs-data-sm: 1.05rem;
+  --fs-body: 16px;
+  --fs-data: 1.25rem;
+  --fs-h1: 1.6rem;
+  --fs-stat: 2rem;
+  --fs-kpi: 3rem;
+
+  --lh-tight: 1;
+  --lh-heading: 1.15;
+  --lh-code: 1.2;
+  --lh-body: 1.45;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 18px;
+  --space-6: 22px;
+  --space-7: 24px;
+
+  --px: 3px;
+  --sidebar-w: 248px;
+  --workspace-h: 700px;
+  --workspace-h-sm: 460px;
+
+  --dot: 16px;
+
+  color-scheme: dark;
+  margin: 0;
+  min-height: 100%;
+  background-color: var(--ink);
+  background-image: radial-gradient(var(--ink-3) 1px, transparent 1px);
+  background-size: var(--dot) var(--dot);
+  color: var(--paper);
+  font-family: var(--f-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: none;
+}
+
+html.silky-theme,
+html.silky-theme body,
+html.silky-theme #app {
+  height: 100%;
+  margin: 0;
+}
+
+.silky-theme *,
+.silky-theme *::before,
+.silky-theme *::after {
+  box-sizing: border-box;
+}
+
+.silky-theme img,
+.silky-theme canvas {
+  image-rendering: pixelated;
+  max-width: 100%;
+}
+
+.silky-theme h1,
+.silky-theme h2,
+.silky-theme h3 {
+  font-family: var(--f-display);
+  font-weight: 400;
+  margin: 0;
+  text-wrap: balance;
+  letter-spacing: 0.02em;
+}
+
+.silky-theme h1 {
+  font-size: var(--fs-h1);
+  line-height: var(--lh-heading);
+}
+
+.silky-theme h2 {
+  font-size: var(--fs-h2);
+}
+
+.silky-theme h3 {
+  font-size: var(--fs-h3);
+}
+
+.silky-theme p {
+  margin: 0;
+}
+
+.silky-theme a {
+  color: inherit;
+}
+
+.silky-theme :focus-visible {
+  outline: var(--px) dashed var(--silk-hi);
+  outline-offset: 4px;
+}
+
+.silky-theme .eyebrow {
+  font-family: var(--f-display);
+  font-size: var(--fs-sm);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+
+.silky-theme .muted {
+  color: var(--mute);
+}
+
+.silky-theme .data {
+  font-family: var(--f-data);
+  font-size: var(--fs-data);
+  line-height: var(--lh-tight);
+  font-variant-numeric: tabular-nums;
+}

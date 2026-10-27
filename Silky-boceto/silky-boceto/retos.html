@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Retos · Silky</title>
+  <meta name="claude:viewport-fit-sides" content="cover">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600&family=Silkscreen&family=VT323&display=swap">
+  <link rel="stylesheet" href="css/pixel.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar__logo">
+        <img src="assets/silky-logo.png" alt="Silky" width="906" height="425">
+        <p class="sidebar__tag">programa · mira · aprende</p>
+      </div>
+      <nav class="nav" aria-label="Módulos">
+        <a href="index.html"><i class="pi" data-icon="code"></i><span>Editor de bloques</span></a>
+        <a href="retos.html" aria-current="page"><i class="pi" data-icon="flag"></i><span>Retos</span></a>
+        <a href="imagenes.html"><i class="pi" data-icon="image"></i><span>Imágenes cara</span></a>
+        <a href="dashboard.html"><i class="pi" data-icon="trophy"></i><span>Puntuación</span></a>
+        <a href="conexion.html"><i class="pi" data-icon="radio-signal"></i><span>Conexión</span></a>
+      </nav>
+      <div class="px-box player">
+        <div class="player__row">
+          <div class="player__avatar"><i class="pi" data-icon="user"></i></div>
+          <div>
+            <div class="player__name">Estudiante</div>
+            <div class="player__lvl">Nivel 2 · Aprendiz</div>
+          </div>
+        </div>
+        <div class="px-progress is-thin" style="--val:70" title="175 de 250 pts para nivel 3"></div>
+        <div class="player__lvl">175 / 250 pts → nivel 3</div>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="topbar__title">
+          <span class="eyebrow">Módulo · Retos</span>
+          <h1>Retos</h1>
+        </div>
+        <div class="topbar__status">
+          <span class="px-chip is-ok"><span class="led is-ok is-blink"></span>WiFi · 42 ms</span>
+          <span class="px-chip"><i class="pi" data-icon="battery-2"></i>78%</span>
+          <span class="px-chip is-silk"><i class="pi" data-icon="coin"></i>175 pts</span>
+        </div>
+      </header>
+
+      <main class="content">
+
+        <section class="px-box summary" aria-label="Resumen">
+          <div class="summary__item"><span class="eyebrow">Completados</span><span class="data">3 / 9</span></div>
+          <div class="summary__item"><span class="eyebrow">Puntos</span><span class="data">175 / 1000</span></div>
+          <div class="summary__item"><span class="eyebrow">Sigue</span><span class="data">#04</span></div>
+          <div class="summary__bar">
+            <span class="eyebrow">Avance de retos · 33 %</span>
+            <div class="px-progress" style="--val:33"></div>
+          </div>
+        </section>
+
+        <div class="px-tabs" role="tablist" aria-label="Filtrar retos">
+          <span class="is-on">Todos</span><span>Movimiento</span><span>Expresiones</span><span>Lógica</span><span>Funciones</span>
+        </div>
+
+        <div class="challenges">
+          <article class="px-box challenge is-done">
+            <div class="challenge__top">
+              <span class="challenge__num">#01</span>
+              <div class="difficulty" title="Dificultad 1 de 3"><i class="on"></i><i class=""></i><i class=""></i></div>
+            </div>
+            <h2>Primeros pasos</h2>
+            <p>Haz que Silky camine 3 pasos hacia adelante y se detenga.</p>
+            <div class="px-field">
+              <span class="px-label">Bloques disponibles</span>
+              <div class="chip-row"><span class="px-chip">al iniciar</span><span class="px-chip">caminar</span><span class="px-chip">detener</span></div>
+            </div>
+            <div class="challenge__foot">
+              <span class="challenge__pts"><i class="pi" data-icon="coin"></i>50</span>
+              <span class="status is-done"><i class="pi" data-icon="check"></i>Completado</span>
+            </div>
+          </article>
+          <article class="px-box challenge is-done">
+            <div class="challenge__top">
+              <span class="challenge__num">#02</span>
+              <div class="difficulty" title="Dificultad 1 de 3"><i class="on"></i><i class=""></i><i class=""></i></div>
+            </div>
+            <h2>Hola, mundo</h2>
+            <p>Muestra la cara feliz y saluda a quien tenga enfrente.</p>
+            <div class="px-field">
+              <span class="px-label">Bloques disponibles</span>
+              <div class="chip-row"><span class="px-chip">mostrar cara</span><span class="px-chip">hacer saludar</span></div>
+            </div>
+            <div class="challenge__foot">
+              <span class="challenge__pts"><i class="pi" data-icon="coin"></i>50</span>
+              <span class="status is-done"><i class="pi" data-icon="check"></i>Completado</span>
+            </div>
+          </article>
+          <article class="px-box challenge is-done">
+            <div class="challenge__top">
+              <span class="challenge__num">#03</span>
+              <div class="difficulty" title="Dificultad 1 de 3"><i class="on"></i><i class=""></i><i class=""></i></div>
+            </div>
+            <h2>Ida y vuelta</h2>
+            <p>Avanza 4 pasos, gira 180° y regresa al punto de partida.</p>
+            <div class="px-field">
+              <span class="px-label">Bloques disponibles</span>
+              <div class="chip-row"><span class="px-chip">caminar</span><span class="px-chip">girar</span></div>
+            </div>
+            <div class="challenge__foot">
+              <span class="challenge__pts"><i class="pi" data-icon="coin"></i>75</span>
+              <span class="status is-done"><i class="pi" data-icon="check"></i>Completado</span>
+            </div>
+          </article>
+          <article class="px-box challenge is-current">
+            <div class="challenge__top">
+              <span class="challenge__num">#04</span>
+              <div class="difficulty" title="Dificultad 2 de 3"><i class="on"></i><i class="on"></i><i class=""></i></div>
+            </div>
+            <h2>La patrulla cuadrada</h2>
+            <p>Recorre un cuadrado usando un solo ciclo y cuenta los lados en una variable.</p>
+            <div class="px-field">
+              <span class="px-label">Bloques disponibles</span>
+              <div class="chip-row"><span class="px-chip">repetir</span><span class="px-chip">caminar</span><span class="px-chip">girar</span><span class="px-chip">variables</span></div>
+            </div>
+            <div class="challenge__foot">
+              <span class="challenge__pts"><i class="pi" data-icon="coin"></i>100</span>
+              <a class="px-btn is-primary is-sm" href="index.html"><i class="pi" data-icon="play"></i>Continuar</a>
+            </div>
+          </article>
+          <article class="px-box challenge ">
+            <div class="challenge__top">
+              <span class="challenge__num">#05</span>
+              <div class="difficulty" title="Dificultad 2 de 3"><i class="on"></i><i class="on"></i><i class=""></i></div>
+            </div>
+            <h2>Contador en la cara</h2>
+            <p>Cuenta cada paso con una variable y muestra el total en la pantalla OLED.</p>
+            <div class="px-field">
+              <span class="px-label">Bloques disponibles</span>
+              <div class="chip-row"><span class="px-chip">variables</span><span class="px-chip">mostrar texto</span><span class="px-chip">repetir</span></div>
+            </div>
+            <div class="challenge__foot">
+              <span class="challenge__pts"><i class="pi" data-icon="coin"></i>100</span>
+              <a class="px-btn is-sm" href="index.html"><i class="pi" data-icon="arrow-right"></i>Empezar</a>
+            </div>
+          </article>
+          <article class="px-box challenge is-locked">
+            <div class="challenge__top">
+              <span class="challenge__num">#06</span>
+              <div class="difficulty" title="Dificultad 2 de 3"><i class="on"></i><i class="on"></i><i class=""></i></div>
+            </div>
+            <h2>¿Batería baja?</h2>
+            <p>Si la batería baja de 30 %, muestra la cara dormida y siéntate.</p>
+            <div class="px-field">
+              <span class="px-label">Bloques disponibles</span>
+              <div class="chip-row"><span class="px-chip">si / si no</span><span class="px-chip">batería %</span><span class="px-chip">comparar</span></div>
+            </div>
+            <div class="challenge__foot">
+              <span class="challenge__pts"><i class="pi" data-icon="coin"></i>125</span>
+              <span class="status is-locked"><i class="pi" data-icon="lock"></i>Bloqueado</span>
+            </div>
+          </article>
+          <article class="px-box challenge is-locked">
+            <div class="challenge__top">
+              <span class="challenge__num">#07</span>
+              <div class="difficulty" title="Dificultad 3 de 3"><i class="on"></i><i class="on"></i><i class="on"></i></div>
+            </div>
+            <h2>Semáforo de emociones</h2>
+            <p>Cambia la expresión según el valor de una variable: tres casos distintos.</p>
+            <div class="px-field">
+              <span class="px-label">Bloques disponibles</span>
+              <div class="chip-row"><span class="px-chip">si / si no si</span><span class="px-chip">variables</span><span class="px-chip">mostrar cara</span></div>
+            </div>
+            <div class="challenge__foot">
+              <span class="challenge__pts"><i class="pi" data-icon="coin"></i>150</span>
+              <span class="status is-locked"><i class="pi" data-icon="lock"></i>Bloqueado</span>
+            </div>
+          </article>
+          <article class="px-box challenge is-locked">
+            <div class="challenge__top">
+              <span class="challenge__num">#08</span>
+              <div class="difficulty" title="Dificultad 3 de 3"><i class="on"></i><i class="on"></i><i class="on"></i></div>
+            </div>
+            <h2>Coreografía</h2>
+            <p>Crea la función «baile» con 5 movimientos y llámala dos veces.</p>
+            <div class="px-field">
+              <span class="px-label">Bloques disponibles</span>
+              <div class="chip-row"><span class="px-chip">funciones</span><span class="px-chip">hacer</span><span class="px-chip">esperar</span></div>
+            </div>
+            <div class="challenge__foot">
+              <span class="challenge__pts"><i class="pi" data-icon="coin"></i>150</span>
+              <span class="status is-locked"><i class="pi" data-icon="lock"></i>Bloqueado</span>
+            </div>
+          </article>
+          <article class="px-box challenge is-locked">
+            <div class="challenge__top">
+              <span class="challenge__num">#09</span>
+              <div class="difficulty" title="Dificultad 3 de 3"><i class="on"></i><i class="on"></i><i class="on"></i></div>
+            </div>
+            <h2>Mi propia cara</h2>
+            <p>Sube una imagen tuya y muéstrala al terminar un recorrido completo.</p>
+            <div class="px-field">
+              <span class="px-label">Bloques disponibles</span>
+              <div class="chip-row"><span class="px-chip">mostrar imagen</span><span class="px-chip">funciones</span><span class="px-chip">repetir</span></div>
+            </div>
+            <div class="challenge__foot">
+              <span class="challenge__pts"><i class="pi" data-icon="coin"></i>200</span>
+              <span class="status is-locked"><i class="pi" data-icon="lock"></i>Bloqueado</span>
+            </div>
+          </article>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/icons-data.js"></script>
+  <script src="js/pixel-art.js"></script>
+</body>
+</html>

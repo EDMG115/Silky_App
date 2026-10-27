@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Imágenes para la cara · Silky</title>
+  <meta name="claude:viewport-fit-sides" content="cover">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600&family=Silkscreen&family=VT323&display=swap">
+  <link rel="stylesheet" href="css/pixel.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar__logo">
+        <img src="assets/silky-logo.png" alt="Silky" width="906" height="425">
+        <p class="sidebar__tag">programa · mira · aprende</p>
+      </div>
+      <nav class="nav" aria-label="Módulos">
+        <a href="index.html"><i class="pi" data-icon="code"></i><span>Editor de bloques</span></a>
+        <a href="retos.html"><i class="pi" data-icon="flag"></i><span>Retos</span></a>
+        <a href="imagenes.html" aria-current="page"><i class="pi" data-icon="image"></i><span>Imágenes cara</span></a>
+        <a href="dashboard.html"><i class="pi" data-icon="trophy"></i><span>Puntuación</span></a>
+        <a href="conexion.html"><i class="pi" data-icon="radio-signal"></i><span>Conexión</span></a>
+      </nav>
+      <div class="px-box player">
+        <div class="player__row">
+          <div class="player__avatar"><i class="pi" data-icon="user"></i></div>
+          <div>
+            <div class="player__name">Estudiante</div>
+            <div class="player__lvl">Nivel 2 · Aprendiz</div>
+          </div>
+        </div>
+        <div class="px-progress is-thin" style="--val:70" title="175 de 250 pts para nivel 3"></div>
+        <div class="player__lvl">175 / 250 pts → nivel 3</div>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="topbar__title">
+          <span class="eyebrow">Módulo · Cara OLED</span>
+          <h1>Imágenes para la cara</h1>
+        </div>
+        <div class="topbar__status">
+          <span class="px-chip is-ok"><span class="led is-ok is-blink"></span>WiFi · 42 ms</span>
+          <span class="px-chip"><i class="pi" data-icon="battery-2"></i>78%</span>
+          <span class="px-chip is-silk"><i class="pi" data-icon="coin"></i>175 pts</span>
+        </div>
+      </header>
+
+      <main class="content">
+
+        <div class="steps">
+          <section class="px-box px-card" aria-label="Subir y ajustar">
+            <h2><span class="step-num">1</span> Sube una imagen</h2>
+            <div class="dropzone">
+              <i class="pi" data-icon="upload"></i>
+              <p>Arrastra un PNG o JPG aquí</p>
+              <button class="px-btn is-sm" type="button">Elegir archivo</button>
+            </div>
+            <div class="px-box is-sunk file-loaded">
+              <img src="assets/silky-logo.png" alt="Imagen cargada: logo de Silky">
+              <div>
+                <div class="data">silky-logo.png</div>
+                <div class="muted">906 × 425 px · 109 KB</div>
+              </div>
+            </div>
+
+            <h2><span class="step-num">2</span> Ajusta a 128 × 64</h2>
+            <div class="controls-grid">
+              <div class="px-field">
+                <span class="px-label">Encuadre</span>
+                <div class="px-seg"><span class="is-on">Contener</span><span>Rellenar</span><span>Estirar</span></div>
+              </div>
+              <div class="px-field">
+                <span class="px-label">Umbral blanco / negro</span>
+                <div class="px-slider" style="--val:43"><div class="px-slider__track"></div><span class="data">110</span></div>
+              </div>
+              <div class="px-field">
+                <span class="px-label">Tramado</span>
+                <div class="px-seg"><span class="is-on">Ninguno</span><span>Floyd–Steinberg</span><span>Bayer 4×4</span></div>
+              </div>
+              <div class="inline-field">
+                <span class="px-label">Invertir colores</span>
+                <span class="px-switch" role="switch" aria-checked="false"></span>
+              </div>
+            </div>
+          </section>
+
+          <section class="px-box px-card" aria-label="Vista previa">
+            <div class="px-card__head">
+              <h2><span class="step-num">3</span> Vista previa</h2>
+              <span class="px-chip">SSD1306 · 128 × 64</span>
+            </div>
+            <div class="oled-frame">
+              <div class="ruler"><span>0</span><span>32</span><span>64</span><span>96</span><span>127</span></div>
+              <div class="oled-screen"><img src="assets/oled-silky.png" alt="Logo de Silky convertido a 1 bit, 128 × 64"></div>
+              <div class="oled-meta"><span>1 bit por píxel</span><span>1 024 bytes</span><span>1 928 píxeles encendidos</span></div>
+            </div>
+            <div class="preview-pair">
+              <div class="px-card" style="padding:0">
+                <h3>Así se verá en Silky</h3>
+                <p class="muted">La imagen se envía como un mapa de bits de 1 024 bytes a <span class="data">POST /api/face</span>.</p>
+                <div class="px-btn-row">
+                  <button class="px-btn is-primary" type="button"><i class="pi" data-icon="android"></i>Mostrar en la cara</button>
+                  <button class="px-btn" type="button"><i class="pi" data-icon="save"></i>Guardar</button>
+                </div>
+              </div>
+              <div class="robot-stage"><canvas data-robot data-face-img="assets/oled-silky.png" aria-label="Silky mostrando el logo en su cara"></canvas></div>
+            </div>
+          </section>
+        </div>
+
+        <section class="px-box px-card" aria-label="Galería de caras">
+          <div class="px-card__head">
+            <h2><i class="pi" data-icon="image-gallery"></i>Galería de caras</h2>
+            <span class="px-chip">8 guardadas · localStorage</span>
+          </div>
+          <div class="gallery">
+            <figure class="px-box is-sunk face-tile is-on">
+              <canvas class="oled" data-face="feliz" aria-label="Cara feliz"></canvas>
+              <figcaption><span>feliz</span><span class="px-chip is-silk">en uso</span></figcaption>
+            </figure>
+            <figure class="px-box is-sunk face-tile">
+              <canvas class="oled" data-face="normal" aria-label="Cara normal"></canvas>
+              <figcaption><span>normal</span><span class="muted">base</span></figcaption>
+            </figure>
+            <figure class="px-box is-sunk face-tile">
+              <canvas class="oled" data-face="triste" aria-label="Cara triste"></canvas>
+              <figcaption><span>triste</span><span class="muted">base</span></figcaption>
+            </figure>
+            <figure class="px-box is-sunk face-tile">
+              <canvas class="oled" data-face="sorprendida" aria-label="Cara sorprendida"></canvas>
+              <figcaption><span>sorprendida</span><span class="muted">base</span></figcaption>
+            </figure>
+            <figure class="px-box is-sunk face-tile">
+              <canvas class="oled" data-face="dormida" aria-label="Cara dormida"></canvas>
+              <figcaption><span>dormida</span><span class="muted">base</span></figcaption>
+            </figure>
+            <figure class="px-box is-sunk face-tile">
+              <canvas class="oled" data-face="enojada" aria-label="Cara enojada"></canvas>
+              <figcaption><span>enojada</span><span class="muted">base</span></figcaption>
+            </figure>
+            <figure class="px-box is-sunk face-tile">
+              <canvas class="oled" data-face="corazon" aria-label="Cara corazón"></canvas>
+              <figcaption><span>corazón</span><span class="muted">base</span></figcaption>
+            </figure>
+            <figure class="px-box is-sunk face-tile">
+              <img class="oled" src="assets/oled-silky.png" alt="Cara: logo de Silky">
+              <figcaption><span>logo_silky</span><span class="muted">tuya</span></figcaption>
+            </figure>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/icons-data.js"></script>
+  <script src="js/pixel-art.js"></script>
+</body>
+</html>

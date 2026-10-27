@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Editor de bloques · Silky</title>
+  <meta name="claude:viewport-fit-sides" content="cover">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600&family=Silkscreen&family=VT323&display=swap">
+  <link rel="stylesheet" href="css/pixel.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar__logo">
+        <img src="assets/silky-logo.png" alt="Silky" width="906" height="425">
+        <p class="sidebar__tag">programa · mira · aprende</p>
+      </div>
+      <nav class="nav" aria-label="Módulos">
+        <a href="index.html" aria-current="page"><i class="pi" data-icon="code"></i><span>Editor de bloques</span></a>
+        <a href="retos.html"><i class="pi" data-icon="flag"></i><span>Retos</span></a>
+        <a href="imagenes.html"><i class="pi" data-icon="image"></i><span>Imágenes cara</span></a>
+        <a href="dashboard.html"><i class="pi" data-icon="trophy"></i><span>Puntuación</span></a>
+        <a href="conexion.html"><i class="pi" data-icon="radio-signal"></i><span>Conexión</span></a>
+      </nav>
+      <div class="px-box player">
+        <div class="player__row">
+          <div class="player__avatar"><i class="pi" data-icon="user"></i></div>
+          <div>
+            <div class="player__name">Estudiante</div>
+            <div class="player__lvl">Nivel 2 · Aprendiz</div>
+          </div>
+        </div>
+        <div class="px-progress is-thin" style="--val:70" title="175 de 250 pts para nivel 3"></div>
+        <div class="player__lvl">175 / 250 pts → nivel 3</div>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="topbar__title">
+          <span class="eyebrow">Módulo · Editor</span>
+          <h1>Editor de bloques</h1>
+        </div>
+        <div class="topbar__status">
+          <span class="px-chip is-ok"><span class="led is-ok is-blink"></span>WiFi · 42 ms</span>
+          <span class="px-chip"><i class="pi" data-icon="battery-2"></i>78%</span>
+          <span class="px-chip is-silk"><i class="pi" data-icon="coin"></i>175 pts</span>
+        </div>
+      </header>
+
+      <main class="content">
+
+        <section class="px-box is-silk mission" aria-label="Reto en curso">
+          <div class="mission__badge">04</div>
+          <div class="mission__text">
+            <span class="eyebrow">Reto en curso</span>
+            <h2>La patrulla cuadrada</h2>
+            <p class="muted">Haz que Silky recorra un cuadrado con un ciclo <b>repetir</b> y cuenta los lados con una variable.</p>
+          </div>
+          <div class="mission__pts">
+            <span class="eyebrow">Recompensa</span>
+            <div class="data">+100 pts</div>
+          </div>
+        </section>
+
+        <div class="editor">
+          <section class="px-box workspace" aria-label="Espacio de trabajo">
+            <div class="workspace__bar">
+              <div class="px-btn-row">
+                <span class="px-label">Programa</span>
+                <span class="data">patrulla_cuadrada</span>
+              </div>
+              <div class="px-btn-row">
+                <button class="px-btn is-sm is-ghost" type="button" aria-label="Alejar"><i class="pi" data-icon="zoom-out"></i></button>
+                <button class="px-btn is-sm is-ghost" type="button" aria-label="Acercar"><i class="pi" data-icon="zoom-in"></i></button>
+                <button class="px-btn is-sm is-ghost" type="button"><i class="pi" data-icon="trash"></i>Limpiar</button>
+                <button class="px-btn is-sm is-ghost" type="button"><i class="pi" data-icon="download"></i>Exportar</button>
+                <button class="px-btn is-sm" type="button"><i class="pi" data-icon="save"></i>Guardar</button>
+              </div>
+            </div>
+            <div id="blocklyDiv"></div>
+            <div class="workspace__foot">
+              <span>15 bloques · 1 variable · 1 función</span>
+              <span><i class="pi" data-icon="save"></i> guardado en localStorage hace 2 min</span>
+            </div>
+          </section>
+
+          <aside class="side">
+            <section class="px-box px-card" aria-label="Robot">
+              <div class="px-card__head">
+                <h2><i class="pi" data-icon="android"></i>Silky</h2>
+                <span class="px-chip is-warn"><span class="led is-warn is-blink"></span>Ejecutando</span>
+              </div>
+              <div class="robot-stage"><canvas data-robot data-face="feliz" aria-label="Silky con cara feliz"></canvas></div>
+              <div class="robot-state"><span class="muted">Instrucción</span><span>caminar adelante 2</span></div>
+              <div class="px-progress is-thin" style="--val:36"></div>
+              <div class="robot-state"><span class="muted">Paso</span><span>5 / 14</span></div>
+              <div class="run-controls">
+                <button class="px-btn is-primary is-lg is-wide" type="button"><i class="pi" data-icon="play"></i>Ejecutar</button>
+                <button class="px-btn" type="button"><i class="pi" data-icon="next"></i>Paso</button>
+                <button class="px-btn is-light" type="button"><i class="pi" data-icon="debug-stop"></i>Detener</button>
+              </div>
+              <p class="muted">Se envía por WiFi a <span class="data">192.168.4.1</span></p>
+            </section>
+
+            <section class="px-box px-card" aria-label="Comandos generados">
+              <div class="px-card__head">
+                <h2><i class="pi" data-icon="script-text"></i>Comandos</h2>
+                <span class="px-chip">JSON</span>
+              </div>
+<pre class="px-console" style="max-height:250px"><span class="c">// POST /api/cmd · 14 comandos</span>
+[
+ {<span class="k">"cmd"</span>:<span class="s">"face"</span>, <span class="k">"name"</span>:<span class="s">"feliz"</span>},
+ {<span class="k">"cmd"</span>:<span class="s">"walk"</span>, <span class="k">"dir"</span>:<span class="s">"fwd"</span>, <span class="k">"steps"</span>:<span class="n">2</span>},
+ {<span class="k">"cmd"</span>:<span class="s">"turn"</span>, <span class="k">"dir"</span>:<span class="s">"R"</span>, <span class="k">"deg"</span>:<span class="n">90</span>},
+ {<span class="k">"cmd"</span>:<span class="s">"walk"</span>, <span class="k">"dir"</span>:<span class="s">"fwd"</span>, <span class="k">"steps"</span>:<span class="n">2</span>},
+ {<span class="k">"cmd"</span>:<span class="s">"turn"</span>, <span class="k">"dir"</span>:<span class="s">"R"</span>, <span class="k">"deg"</span>:<span class="n">90</span>},
+ <span class="c">  … ×2 más</span>
+ {<span class="k">"cmd"</span>:<span class="s">"text"</span>, <span class="k">"value"</span>:<span class="s">"¡Cuadrado!"</span>},
+ {<span class="k">"cmd"</span>:<span class="s">"dance"</span>},
+ {<span class="k">"cmd"</span>:<span class="s">"blink"</span>, <span class="k">"times"</span>:<span class="n">2</span>},
+ {<span class="k">"cmd"</span>:<span class="s">"face"</span>, <span class="k">"name"</span>:<span class="s">"corazon"</span>}
+]</pre>
+            </section>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/icons-data.js"></script>
+  <script src="js/pixel-art.js"></script>
+  <script src="https://unpkg.com/blockly@11.2.1/blockly.min.js"></script>
+  <script src="https://unpkg.com/blockly@11.2.1/msg/es.js"></script>
+  <script src="js/blockly-silky.js"></script>
+</body>
+</html>
